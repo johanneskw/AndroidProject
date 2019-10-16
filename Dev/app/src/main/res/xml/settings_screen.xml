@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Varsling">
+        <ListPreference
+                android:title="Varslingsvalg for dine stasjoner"
+                android:summary="Velg hvilket nivå du ønsker å få varsel om"
+                android:key="alertValue"
+                android:defaultValue="1"
+                android:entries="@array/drop"
+                android:entryValues="@array/dropValue" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Informasjonstype">
+
+        <CheckBoxPreference
+                android:key="astma_key"
+                android:title="@string/astma"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="old_key"
+                android:title="@string/eldre"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="heart_key"
+                android:title="@string/hjerte"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="preg_key"
+                android:title="@string/gravide"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:key="gen_key"
+                android:title="@string/ingen"
+                android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="Kartstil">
+
+        <ListPreference
+                android:title="Velg stil for kart"
+                android:summary=" "
+                android:key="MapStyle"
+                android:defaultValue="1"
+                android:entries="@array/modus"
+                android:entryValues="@array/modusvalue"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="Hjelp">
+        <Preference
+                android:title="Hvordan bruke appen"
+                android:summary="Hvordan bruke appen."
+                android:key="Help">
+        </Preference>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Kontakt oss">
+        <Preference
+            android:title="Tilbakemeldinger"
+            android:summary="Gi oss dine tilbakemeldinger."
+            android:key="MailTo">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mailto:johanneskw@gmail.com">
+            </intent>
+        </Preference>
+        <Preference
+                android:title=" "
+                android:summary="\n"/>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
